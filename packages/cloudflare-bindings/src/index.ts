@@ -2,7 +2,7 @@ import type { AnswerResponse, RepositorySnapshot } from "@cursor-devops/shared-t
 
 export interface CursorDevOpsEnv {
   DB: D1Database;
-  SNAPSHOTS: R2Bucket;
+  SNAPSHOTS?: R2Bucket;
   VECTOR_INDEX: VectorizeIndex;
   AI?: Ai;
   INGESTION_WORKFLOW?: Workflow<RepositorySnapshot>;

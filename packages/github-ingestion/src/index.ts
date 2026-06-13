@@ -17,7 +17,10 @@ export async function ingestRepository(input: IngestRepositoryInput, env: Cursor
   const chunks = chunkFiles(classified, snapshot.repoId, snapshot.commitSha);
   const r2Key = `snapshots/${snapshot.repoId}/${snapshot.commitSha}.json`;
 
-  await env.SNAPSHOTS.put(r2Key, JSON.stringify(snapshot));
+  if (env.SNAPSHOTS) {
+    await env.SNAPSHOTS.put(r2Key, JSON.stringify(snapshot));
+  }
+
   await env.DB.prepare("INSERT OR REPLACE INTO repository_snapshots (repo_id, commit_sha, r2_key) VALUES (?, ?, ?)")
     .bind(snapshot.repoId, snapshot.commitSha, r2Key)
     .run();
