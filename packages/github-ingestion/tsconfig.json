@@ -6,6 +6,10 @@
   "include": ["src/**/*.ts"],
   "references": [
     { "path": "../shared-types" },
-    { "path": "../cloudflare-bindings" }
+    { "path": "../cloudflare-bindings" },
+    { "path": "../embeddings" },
+    { "path": "../graph-builder" },
+    { "path": "../parser" },
+    { "path": "../retrieval" }
   ]
 }

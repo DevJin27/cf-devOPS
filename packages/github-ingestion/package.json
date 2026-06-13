@@ -8,6 +8,10 @@
   },
   "dependencies": {
     "@cursor-devops/cloudflare-bindings": "0.1.0",
+    "@cursor-devops/embeddings": "0.1.0",
+    "@cursor-devops/graph-builder": "0.1.0",
+    "@cursor-devops/parser": "0.1.0",
+    "@cursor-devops/retrieval": "0.1.0",
     "@cursor-devops/shared-types": "0.1.0"
   }
 }
