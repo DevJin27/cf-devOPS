@@ -14,7 +14,7 @@
     {
       "binding": "DB",
       "database_name": "cursor_devops",
-      "database_id": "replace-with-cloudflare-d1-database-id",
+      "database_id": "b59c9088-7221-4dfd-a3dd-d68ff01831aa",
       "migrations_dir": "../../infrastructure/migrations"
     }
   ],
