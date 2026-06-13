@@ -11,6 +11,7 @@
     "sourceMap": true,
     "composite": true,
     "rootDir": ".",
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "@cursor-devops/shared-types": ["packages/shared-types/src/index.ts"],
