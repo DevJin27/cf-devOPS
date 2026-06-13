@@ -4,5 +4,8 @@
     "types": ["@cloudflare/workers-types"]
   },
   "include": ["src/**/*.ts"],
-  "references": [{ "path": "../shared-types" }]
+  "references": [
+    { "path": "../shared-types" },
+    { "path": "../cloudflare-bindings" }
+  ]
 }

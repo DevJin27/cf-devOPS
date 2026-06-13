@@ -24,6 +24,14 @@ export function errorResponse(message: string, status = 400): Response {
   return jsonResponse({ error: message }, { status });
 }
 
+export function redactSensitiveText(value: string): string {
+  return value
+    .replace(/([?&](?:token|key|secret|password)=)[^&\s]+/gi, "$1[REDACTED]")
+    .replace(/\b([A-Za-z0-9._%+-]+):([^@\s]+)@/g, "$1:[REDACTED]@")
+    .replace(/\b(?:ghp|github_pat|glpat|xox[baprs])-?[A-Za-z0-9_:-]{16,}\b/g, "[REDACTED_TOKEN]")
+    .replace(/\b[A-Za-z0-9+/]{32,}={0,2}\b/g, "[REDACTED_SECRET]");
+}
+
 export const notReadyAnswer: AnswerResponse = {
   answer: "No indexed infrastructure evidence is available yet.",
   evidence: [],

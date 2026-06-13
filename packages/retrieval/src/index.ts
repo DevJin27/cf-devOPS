@@ -1,3 +1,4 @@
+import { redactSensitiveText } from "@cursor-devops/cloudflare-bindings";
 import type { Chunk, ClassifiedFile, Evidence, IntentResult } from "@cursor-devops/shared-types";
 
 export function classifyIntent(question: string): IntentResult {
@@ -86,7 +87,7 @@ async function retrieveTextEvidence(db: D1Database, question: string): Promise<E
     .all<{ source_file: string; content: string }>();
 
   return result.results.map((row) => ({
-    content: row.content.slice(0, 500),
+    content: redactSensitiveText(row.content.slice(0, 500)),
     source: row.source_file,
     score: 0.6
   }));
