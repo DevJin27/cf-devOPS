@@ -1,0 +1,10 @@
+{
+  "name": "@cursor-devops/workflow-runner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@cursor-devops/cloudflare-bindings": "0.1.0",
+    "@cursor-devops/shared-types": "0.1.0"
+  }
+}

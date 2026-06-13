@@ -1,0 +1,15 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/shared-types" },
+    { "path": "./packages/cloudflare-bindings" },
+    { "path": "./packages/parser" },
+    { "path": "./packages/graph-builder" },
+    { "path": "./packages/retrieval" },
+    { "path": "./packages/answer-engine" },
+    { "path": "./packages/github-ingestion" },
+    { "path": "./packages/embeddings" },
+    { "path": "./apps/api-worker" },
+    { "path": "./apps/workflow-runner" }
+  ]
+}

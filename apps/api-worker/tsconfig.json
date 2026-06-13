@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["@cloudflare/workers-types"]
+  },
+  "include": ["src/**/*.ts"],
+  "references": [
+    { "path": "../../packages/shared-types" },
+    { "path": "../../packages/cloudflare-bindings" },
+    { "path": "../../packages/parser" },
+    { "path": "../../packages/graph-builder" },
+    { "path": "../../packages/retrieval" },
+    { "path": "../../packages/answer-engine" },
+    { "path": "../../packages/github-ingestion" },
+    { "path": "../workflow-runner" }
+  ]
+}

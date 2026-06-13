@@ -1,0 +1,13 @@
+{
+  "name": "@cursor-devops/parser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@cursor-devops/shared-types": "0.1.0",
+    "yaml": "^2.8.0"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "cursor-devops-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-13",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "ENVIRONMENT": "development"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "cursor_devops",
+      "database_id": "replace-with-cloudflare-d1-database-id",
+      "migrations_dir": "../../infrastructure/migrations"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "SNAPSHOTS",
+      "bucket_name": "cursor-devops-snapshots"
+    }
+  ],
+  "vectorize": [
+    {
+      "binding": "VECTOR_INDEX",
+      "index_name": "cursor-devops"
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "workflows": [
+    {
+      "name": "cursor-devops-ingestion",
+      "binding": "INGESTION_WORKFLOW",
+      "class_name": "IngestionWorkflow"
+    }
+  ]
+}

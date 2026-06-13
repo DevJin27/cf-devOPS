@@ -1,0 +1,12 @@
+{
+  "name": "@cursor-devops/graph-builder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@cursor-devops/shared-types": "0.1.0"
+  }
+}

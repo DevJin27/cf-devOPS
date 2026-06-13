@@ -1,0 +1,14 @@
+{
+  "name": "@cursor-devops/answer-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@cursor-devops/cloudflare-bindings": "0.1.0",
+    "@cursor-devops/retrieval": "0.1.0",
+    "@cursor-devops/shared-types": "0.1.0"
+  }
+}

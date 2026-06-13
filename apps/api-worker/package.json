@@ -1,0 +1,20 @@
+{
+  "name": "@cursor-devops/api-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@cursor-devops/answer-engine": "0.1.0",
+    "@cursor-devops/cloudflare-bindings": "0.1.0",
+    "@cursor-devops/github-ingestion": "0.1.0",
+    "@cursor-devops/graph-builder": "0.1.0",
+    "@cursor-devops/parser": "0.1.0",
+    "@cursor-devops/retrieval": "0.1.0",
+    "@cursor-devops/shared-types": "0.1.0",
+    "@cursor-devops/workflow-runner": "0.1.0"
+  }
+}
